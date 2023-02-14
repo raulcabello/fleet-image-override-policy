@@ -8,7 +8,27 @@ This policy will override fleet images for testing custom fleet version in Ranch
 
 ```
 controller_image: raulcabm/fleet-controller:test1
-agent_image: raulcabm/fleet-controller:test1
+```
+
+## Example
+
+```
+apiVersion: policies.kubewarden.io/v1
+kind: ClusterAdmissionPolicy
+metadata:
+  name: fleet-override
+spec:
+  module: ghcr.io/raulcabello/policies/fleet-image-override:latest
+  rules:
+  - apiGroups: ["", "apps", "batch"]
+    apiVersions: ["v1"]
+    resources: ["deployments", "configmaps"]
+    operations:
+    - CREATE
+    - UPDATE
+  mutating: true
+  settings:
+    controller_image: raulcabm/fleet:agent-fix1
 ```
 
 ## License
