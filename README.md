@@ -6,9 +6,10 @@ This policy will override fleet images for testing custom fleet version in Ranch
 
 ## Settings
 
+```
 controller_image: raulcabm/fleet-controller:test1
-
 agent_image: raulcabm/fleet-controller:test1
+```
 
 ## License
 
