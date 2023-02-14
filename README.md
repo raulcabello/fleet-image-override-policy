@@ -1,23 +1,13 @@
-Please, note well: this file and the scaffold were generated from [a
-template](https://github.com/kubewarden/rust-policy-template). Make
-this project yours!
-
-You can use `cargo generate -g https://github.com/kubewarden/rust-policy-template.git`
-to create your Policy from this template.
-
 # Kubewarden policy fleet-image-override
 
 ## Description
 
-This policy will reject pods that have a name `invalid-pod-name`. If
-the pod to be validated has a different name, or if a different type
-of resource is evaluated, it will be accepted.
+This policy will override fleet images for testing custom fleet version in Rancher. This policy should not be used in Production!
 
 ## Settings
 
-This policy has no configurable settings. This would be a good place
-to document if yours does, and what behaviors can be configured by
-tweaking them.
+controller_image: raulcabm/fleet-controller:test1
+agent_image: raulcabm/fleet-controller:test1
 
 ## License
 
