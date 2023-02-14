@@ -1,0 +1,27 @@
+{
+  "uid": "1299d386-525b-4032-98ae-1949f69f9cfc",
+  "kind": {
+    "kind": "ConfigMap",
+    "version": "v1"
+  },
+  "object": {
+    "metadata": {
+      "name": "fleet-controller"
+    },
+    "data": {
+      "config": "{\"systemDefaultRegistry\": \"\",\"agentImage\": \"rancher/fleet-agent:v0.6.0-rc.2\"}"
+    }
+  },
+  "operation": "CREATE",
+  "requestKind": {
+    "version": "v1",
+    "kind": "ConfigMap"
+  },
+  "userInfo": {
+    "username": "alice",
+    "uid": "alice-uid",
+    "groups": [
+      "system:authenticated"
+    ]
+  }
+}
