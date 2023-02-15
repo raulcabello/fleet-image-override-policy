@@ -22,13 +22,13 @@ spec:
   rules:
   - apiGroups: ["", "apps", "batch"]
     apiVersions: ["v1"]
-    resources: ["deployments", "configmaps"]
+    resources: ["deployments"]
     operations:
     - CREATE
     - UPDATE
   mutating: true
   settings:
-    controller_image: raulcabm/fleet:agent-fix1
+    controller_image: raulcabm/fleet:agent-fixv0.6.0
 ```
 
 ## License
